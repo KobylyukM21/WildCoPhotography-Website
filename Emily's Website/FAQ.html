@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--- Makes the webpage adjust to diffrent devices -->
+    <title>Wild & Co Photography</title>
+    <link rel="icon" type="image/x-icon" href="./style/images/favicon.ico">
+    <link rel="stylesheet" href="style/css/FAQ.css">
+    <!-- Font For Whole Website Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&display=swap" rel="stylesheet"> 
+    <!--- Fonts for whole website End -->
+    <!-- Font for about section start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <!-- Font for about section end -->
+    <!-- Font for top logo start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+    <!-- Font for top logo end -->
+    <!--- Font for FAQ Section Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&family=Tangerine&display=swap" rel="stylesheet">
+    <!--- Font for FAQ Section End -->
+    <!-- Link to Icons for menu start -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link to Icons for menu end -->
+    <!-- JavaScript JQuery Start -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- JavaScript JQuery End -->
+    <!--- Social Media Icons Start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--- Social Media Icons End -->
+</head>
+<body>
+    <section class="headerFAQ">
+        <nav>
+            <img id="MainLogo" src="./style/images/MainLogo.png">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i> <!--- Hides the menu bars when its on mobile view -->
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="">INVESTMENT</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+                
+            </div>
+            <i class="fa fa-bars"onclick="showMenu()"></i> <!--- Shows the menu bars when its on mobile view -->
+        </nav>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="faq-wrapper">
+                    <div class="headerFAQWelcome">
+                        <h3 id="QuestTitle">Frequently Asked Questions</h3>
+                    </div>
+                    <div class="faq-inner">
+                        <div class="faq-item">
+                            <h4 id="Quest">WHAT IS YOUR TURN AROUND TIME?
+                            <span class="faq-plus">&plus;</span>
+                            </h4>
+                            <div class="faq-body">
+                                I deliver sessions within 2 weeks + weddings within 3 months.
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="faq-item">
+                            <h5 id="Quest">HOW MANY PHOTOS DO YOU DELIVER?
+                                <span class="faq-plus">&plus;</span>
+                            </h5>
+                            <div class="faq-body">
+                                All of the photos that turn out! (I get rid of all the duplicates, eyes closed, etc). 
+                                With sessions you may receive around 80-150 + Weddings around 800-1000 depending on 
+                                how many hours were covered.
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="faq-item">
+                            <h6 id="Quest">CAN WE BRING OUR PETS?
+                                <span class="faq-plus">&plus;</span>
+                            </h6>
+                            <div class="faq-body">
+                                Yes of course!
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="faq-item">
+                            <h7 id="Quest">DO YOU TRAVEL?
+                                <span class="faq-plus">&plus;</span>
+                            </h7>
+                            <div class="faq-body">
+                                I love to travel! Contact me directly for information about my travel fees.
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="faq-item">
+                            <h8 id="Quest">WHEN SHOULD I BOOK?
+                                <span class="faq-plus">&plus;</span>
+                            </h8>
+                            <div class="faq-body">
+                                ASAP! Dates fill up fast (especially in the spring and fall). My weekends typically book up first, but I am available weekdays as well!
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="SocialM">
+            <a href="https://www.facebook.com/wildcophotography/" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/wildcophoto/" class="fa fa-instagram"></a>
+        </footer>
+    </body>
+
+<!-------- JavaScript for Toggle Menu Start -------->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function scrollEvent() {
+        window.scrollTo(0, 0)
+    }
+
+    function showMenu() {
+        navLinks.style.right = "0"; /* Sets right to 0 causing the menu bar to appear in mobile view */
+
+        document.addEventListener('click', () => {
+            window.addEventListener('scroll', scrollEvent)
+        })
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px"; /* Sets right to -200 causing the menu bar to disappear in mobile view */
+
+        document.addEventListener('click', () => {
+            window.removeEventListener('scroll', scrollEvent)
+        })
+    }
+
+</script>
+<!-------- JavaScript for Toggle Menu End -------->
+<!-- JavaScript for FAQ Menu Start -->
+<script type="text/javascript">
+    $(".faq-plus").on('click', function(){
+        $(this).parent().parent().find('.faq-body').slideToggle();
+    });
+</script>
+<!-- JavaScript for FAQ Menu End -->
+</html>
