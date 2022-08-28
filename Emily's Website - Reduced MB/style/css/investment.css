@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
+    background-color: #EEE6E1;
 }
 
 body {
@@ -101,6 +102,52 @@ nav .fa{
 .lock-scroll {
     overflow-y: hidden; 
 }
+/* Investment Start */
+.InvestCont1 {
+    background-color: #EEE6E1;
+    text-align: center;
+    columns: 2;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #9b9a94;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#InvestIMG1 {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.InvestCont1 h2 {
+    font-family: 'Inria Serif', serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: #9b9a94;
+    padding-bottom: 50px;
+    text-align: left;
+}
+
+.InvestCont1 p {
+    font-family: 'Inria Serif', serif;
+    font-weight: lighter;
+    font-size: 30px;
+    color: #9b9a94;
+    text-align: left;
+}
+
+#PriceWedd {
+    font-family: 'Inria Serif', serif;
+    font-weight: lighter;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-top: 5px;
+}
+/* Investment End */
 /* Mobile View Start */
 @media(max-width: 1399px){
     html, body {
@@ -149,6 +196,24 @@ nav .fa{
     #MainLogo{
         margin-top: 15px;
         background: #EEE6E1;
+    }
+
+    .SocialM {
+        padding-top: 40px;
+    }
+
+    .InvestCont1 {
+        columns: 1;
+    }
+
+    .InvestCont1 h2 {
+        font-size: 30px;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .InvestCont1 p {
+        font-size: 20px;
     }
 }
 /* Mobile View End */
