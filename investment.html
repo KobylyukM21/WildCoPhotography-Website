@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--- Makes the webpage adjust to diffrent devices -->
+            <title>Wild & Co Photography</title>
+            <link rel="icon" type="image/x-icon" href="./style/images/favicon.ico">
+            <link rel="stylesheet" href="style/css/investment.css">
+            <!-- Font For Whole Website Start -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&display=swap" rel="stylesheet"> 
+            <!--- Fonts for whole website End -->
+            <!-- Font for about section start -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+            <!-- Font for about section end -->
+            <!-- Font for top logo start -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+            <!-- Font for top logo end -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Link to Icons for 
+            menu -->
+        </head>
+        <body>
+            <section class="header">
+                <nav>
+                    <img id="MainLogo" src="./style/images/MainLogo.png">
+                    <div class="nav-links" id="navLinks">
+                        <i class="fa fa-times" onclick="hideMenu()"></i> <!--- Hides the menu bars when its on mobile view -->
+                        <ul> <!--- Links to other tabs-->
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="gallery.html">GALLERY</a></li>
+                            <li><a href="investment.html">INVESTMENT</a></li>
+                            <li><a href="FAQ.html">FAQ</a></li>
+                            <li><a href="contactme.html">CONTACT ME</a></li>
+                        </ul>
+                    </div>
+                    <i class="fa fa-bars"onclick="showMenu()"></i> <!--- Shows the menu bars when its on mobile view -->
+                </nav>
+            </section>
+            <!--- Investment Page Info Start -->
+            <div class="InvestCont">
+                <img id="InvestIMG" src="./style/images/InvestmentCover/Invest1.jpg">
+                <h2 id="SessInfoH">Couples/Engagement</h2>
+                <p id="SessInfoP"> 30 minutes or 1 hour of shooting <br>
+                    1 Location <br>
+                    60+ Edited digital photos <br>
+                </p>
+            </div>
+            <div id="PriceWedd">30 minutes-$200&ensp;&ensp;1 hour-$300</div>
+            <div class="InvestCont">
+                <h2 id="SessInfoH2">Lifestyle/Family</h2>
+                <p id="SessInfoP2"> 1 Hour of shooting <br>
+                    1 Location <br>
+                    80+ Edited digital photos <br>
+                </p>
+                <img id="InvestIMG" src="./style/images/InvestmentCover/Invest2.jpg">  
+            </div>
+            <div id="PriceWedd">$350</div>
+            <div class="InvestCont">
+                <img id="InvestIMG" src="./style/images/InvestmentCover/Invest3.jpg">
+                <h2 id="SessInfoH">Wedding/Elopements</h2>
+                <p id="SessInfoP"> Contact me directly to recieve my wedding pricing <br>
+                    guides with more details on my services! <br>
+                </p>
+            </div>
+            <div id="PriceWedd">STARTING AT $2,400</div>
+            <div class="InfoLink">
+                <a id="ContactBtt" href="contactme.html">Ready to Begin?</a>
+            </div>
+            <!--- Investment Page Info End -->
+            <!---- Social Media Icons Start -->
+            <footer class="SocialM">
+                <a href="https://www.facebook.com/wildcophotography/" class="fa fa-facebook"></a>
+                <a href="https://www.instagram.com/wildcophoto/" class="fa fa-instagram"></a>
+            </footer>
+            <!---- Social Media Icons End -->
+        </body>
+        <!-------- JavaScript for Toggle Menu -------->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function scrollEvent() {
+                window.scrollTo(0, 0)
+            }
+
+            function showMenu() {
+                navLinks.style.right = "0"; /* Sets right to 0 causing the menu bar to appear in mobile view */
+
+                document.addEventListener('click', () => {
+                    window.addEventListener('scroll', scrollEvent)
+                })
+            }
+
+            function hideMenu() {
+                navLinks.style.right = "-200px"; /* Sets right to -200 causing the menu bar to disappear in mobile view */
+
+                document.addEventListener('click', () => {
+                    window.removeEventListener('scroll', scrollEvent)
+                })
+            }
+        </script>
+    </html>
