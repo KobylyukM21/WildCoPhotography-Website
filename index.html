@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild & Co Photography</title>
+    <link rel="icon" type="image/x-icon" href="./style/images/favicon.ico">
+    <link rel="stylesheet" href="./style/css/index.css">
+    <!-- Font For Whole Website Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300&display=swap" rel="stylesheet"> 
+    <!--- Fonts for whole website End -->
+    <!-- Font for about section start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <!-- Font for about section end -->
+    <!-- Font for top logo start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+    <!-- Font for top logo end -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Link to Icons for menu -->
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <img id="MainLogo" src="./style/images/MainLogo.png">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i> <!--- Hides the menu bars when its on mobile view -->
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="investment.html">INVESTMENT</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a href="ContactForm.html">CONTACT ME</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars"onclick="showMenu()"></i> <!--- Shows the menu bars when its on mobile view -->
+        </nav>
+    </section>
+    <div class="wrapper box">
+        <div class="single-box"><img alt="" src="./style/images/PhotoGallery/SlideshowPics/Slideshow1.jpg"></div>
+        <div class="single-box"><img alt="" src="./style/images/PhotoGallery/SlideshowPics/Slideshow2.jpg"></div>
+        <div class="single-box"><img alt="" src="./style/images/PhotoGallery/SlideshowPics/Slideshow3.jpg"></div>
+        <div class="single-box"><img alt="" src="./style/images/PhotoGallery/SlideshowPics/Slideshow4.jpg"></div>
+    </div>
+    <div class="WelcomeText">
+        <h1>Wild & Co Photography</h1>
+        <p>Contact us to book an appointment!</p>
+        <a class="ContactBtt" href="ContactForm.html">CONTACT ME</a>
+    </div>
+    <div class="AboutHead">
+        <h2>About Me</h2>
+    </div>
+    <div class="About-Container">
+        <img id="SelfieImg" src="./style/images/AboutMe/SelfPhoto1.jpg">
+        <h3 id="IntoH"> Hi I&#8217m Emily!</h3>
+        <p> Since I will be asking you a million questions to get to know you, I figured you'd
+            like to know some stuff about me too! So, let me tell you a little bit more about myself&#46;&#46;&#46;
+            I&#8217m a 22 year old girl who was born in Philadelphia PA. I was raised in Florida and moved 
+            to Ohio when I was 15 years old. Ever since I got my first phone I took pictures of everything- and I mean EVERYTHING. 
+            It wasn&#8217t until later, after I settled down in Ohio, I realized I had a passion for photography and it blossomed from there! 
+            This started off as a hobby for me. I was taking photos of my friends and family and I realized I wanted to do this forever. Since 
+            then, God has blessed me with so many opportunities to grow further in my business. It is all because of him! 
+        </p>
+    </div>
+    <footer class="SocialM">
+        <a href="https://www.facebook.com/wildcophotography/" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/wildcophoto/" class="fa fa-instagram"></a>
+    </footer>
+</body>
+<!-------- JavaScript for Toggle Menu -------->
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function scrollEvent() {
+        window.scrollTo(0, 0)
+    }
+
+    function showMenu() {
+        navLinks.style.right = "0"; /* Sets right to 0 causing the menu bar to appear in mobile view */
+
+        document.addEventListener('click', () => {
+            window.addEventListener('scroll', scrollEvent)
+        })
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px"; /* Sets right to -200 causing the menu bar to disappear in mobile view */
+
+        document.addEventListener('click', () => {
+            window.removeEventListener('scroll', scrollEvent)
+        })
+    }
+</script>
+</html>
